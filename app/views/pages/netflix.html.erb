@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>Netflix Login</title>
+  </head>
+  <body bgcolor="#000000" style="color: #fff">
+    <center>
+      <img src="/netflix.jpg" onclick="play()" height="100">
+      <br>
+      <br>
+      <br>
+      <br>
+      <table border="1"  cellpadding="30">
+        <% 5.times do %>
+          <tr>
+            <% 5.times do |n| %>
+              <td>
+                <img src="/giphy.gif" width="200">
+                <br>
+                <center>Movie no <%= n%><center>
+              </td>
+            <% end %>
+          </tr>
+        <% end %>
+      </table>
+      <%= render '/counter'%>
+    </center>
+  <script src="/harlem.js"></script>
+  </body>
+</html>
