@@ -6,6 +6,7 @@ class TopicsController < ApplicationController
 
   # show one event
   def show
+    sleep(rand 3..5)
     @topic = Topic.find(params[:id])
     @events = @topic.events
   end
