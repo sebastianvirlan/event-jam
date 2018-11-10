@@ -1,0 +1,7 @@
+<ul>
+  <% @events.each do |id, event| %>
+    <li><%= event[:title] %> (<%= event[:description] %>)
+      <%= event[:price] %>
+    </li>
+  <% end %>
+</ul>
