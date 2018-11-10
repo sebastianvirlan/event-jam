@@ -27,7 +27,7 @@ class EventsController < ApplicationController
 # user updating event
   def update
     @event = Event.find(params[:id])
-    @event.update(permits)
+    @event.update(event_params)
     redirect_to event_path(@event)
   end
 
