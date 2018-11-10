@@ -37,65 +37,28 @@
 <table width="150%" height="600" border="0">
   <tbody>
     <tr>
-    <td colspan="5" align="right" valign="top"></td>
-  </tr>
-    <tr>
-      <td colspan="2" align="right" valign="middle">
-        <br>
-        <br>
-        <br>
-        <a href="#"><img src="p-pressbox.gif" height="56" width="131" alt="Press Box Shuttle" border="0"></a>
-      </td>
-      <td align="center" valign="middle">
-        <a href="#"><img src="p-jamcentral.gif" height="67" width="55" alt="Jam Central" border="0"></a>
-      </td>
-      <td align="center" valign="top">
-        <a href="#"><img src="p-bball.gif" height="62" width="62" alt="Planet B-Ball" border="0"></a>
-      </td>
-      <td align="center" valign="bottom">
-        <br>
-        <br>
-        <a href="#"><img src="p-lunartunes.gif" height="77" width="95" alt="Lunar Tunes" border="0"></a>
-      </td>
+      <td colspan="5" align="right" valign="top"></td>
     </tr>
     <tr>
-      <td align="middle" valign="top">
-        <br>
-        <br>
-        <a href="#"><img src="p-lineup.gif" height="52" width="63" alt="The Lineup" border="0"></a>
-      </td>
-      <td colspan="3" rowspan="2" align="right" valign="middle">
-        <img src="p-jamlogo.png" height="165" width="272" alt="Space Jam" border="0">
-      </td>
-      <td align="right" valign="bottom">
-        <a href="#"><img src="p-jump.gif" height="52" width="58" alt="Jump Station" border="0"></a>
-      </td>
+      <% (0..3).each do |n| %>
+        <%= render "events/planets/#{@events[n].id}", locals: { event: @events[n] } if @events[n] %>
+      <% end %>
     </tr>
     <tr>
-      <td align="center" valign="bottom">
-        <a href="#"><img src="p-junior.gif" height="57" width="49" alt="Junior Jam" border="0"></a>
-      </td>
-      <td rowspan="2" align="center" valign="top">
-        <br>
-        <br>
-        <a href="#"><img src="p-studiostore.gif" height="72" width="94" alt="Warner Studio Store" border="0"></a>
-      </td>
+      <% (3..6).each do |n| %>
+        <%= render "events/planets/#{@events[n].id}" if @events[n] %>
+      <% end %>
+    </tr>
+    <tr>
+      <% (7..8).each do |n| %>
+        <%= render "events/planets/#{@events[n].id}" if @events[n] %>
+      <% end %>
     </tr>
     <tr>
       <td></td>
-      <td align="center" valign="top">
-        <a href="#"><img src="p-souvenirs.gif" height="83" width="83" alt="Stellar Souvenirs" border="0"></a>
-      </td>
-      <td align="center" valign="bottom">
-        <br>
-        <br>
-        <br>
-        <br>
-        <a href="#"><img src="p-sitemap.gif" height="67" width="104" alt="Site Map" border="0"></a>
-      </td>
-      <td align="center" valign="middle">
-        <a href="#"><img src="p-behind.gif" height="63" width="67" alt="Behind the Jam" border="0"></a>
-      </td>
+      <% (9..11).each do |n| %>
+        <%= render "events/planets/#{@events[n].id}" if @events[n] %>
+      <% end %>
     </tr>
   </tbody>
 </table>
@@ -140,10 +103,3 @@
   </center> %>
   </body>
 </html>
-<ul>
-  <% @events.each do |event| %>
-    <li>
-      <%= event[:title] %> : <%= event[:price] %>
-    </li>
-  <% end %>
-</ul>
