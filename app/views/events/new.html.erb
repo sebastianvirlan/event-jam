@@ -1,0 +1,22 @@
+<!-- <form action="/events" method="post">
+  <label for="name">Event title: </label>
+  <input type="text" name="event[title]" id="title">
+
+  <label for="address">Description: </label>
+  <input type="text" name="event[description]" id="description">
+
+  <label for="address">Price: </label>
+  <input type="text" name="event[price]" id="price">
+
+  <input type="submit">
+</form> -->
+
+
+
+<%= form_for @event do |form| %>
+  <%= form.text_field :title %>
+  <%= form.text_field :description %>
+  <%= form.text_field :price %>
+
+  <%= form.submit %>
+<% end %>

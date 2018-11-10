@@ -7,7 +7,6 @@ class EventsController < ApplicationController
 # show one event
   def show
     @event = Event.find(params[:id])
-
   end
 
 # new instance of event
@@ -17,7 +16,7 @@ class EventsController < ApplicationController
 
 # user creating an event
   def create
-    @event = Event.new
+    @event = Event.create(event_params)
   end
 
 # user editing an event
@@ -35,10 +34,12 @@ class EventsController < ApplicationController
 # user destroying an event
   def destroy
     @event = Event.find(params[:id])
+    @event.destroy
   end
 
   private
 
-  def permits
+  def event_params
+    params.require(:event).permit(:title, :description, :price)
   end
 end
