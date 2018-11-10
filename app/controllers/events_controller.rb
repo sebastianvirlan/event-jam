@@ -17,7 +17,11 @@ class EventsController < ApplicationController
 # user creating an event
   def create
     sleep(rand 1..3)
-    @event = Event.create(event_params)
+    if @event = Event.create(event_params)
+      redirect_to events_path
+    else
+      render :new
+    end
   end
 
 # user editing an event
