@@ -1,9 +1,10 @@
 <div>
   <h2> Edit this event </h2>
-    <%= form_for @event do |form| %>
-    <%= form.text_field :title %>
-    <%= form.text_field :description %>
-    <%= form.text_field :price %>
-    <%= form.submit %>
+    <%= form_for @event do |f| %>
+    <%= f.text_field :title %>
+    <%= f.text_field :description %>
+    <%= f.text_field :price %>
+    <%= f.collection_select :topic_id, Topic.all, :id, :name %>
+    <%= f.submit %>
     <% end %>
 </div>
