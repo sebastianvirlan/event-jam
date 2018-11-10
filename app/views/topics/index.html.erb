@@ -8,7 +8,7 @@
       }
     </style>
   </head>
-  <body bgcolor="#000000" background="bg_stars.gif" text="#ff0000" link="#ff4c4c" vlink="#ff4c4c" alink="#ff4c4c">
+  <body bgcolor="#000000" background="/bg_stars.gif" text="#ff0000" link="#ff4c4c" vlink="#ff4c4c" alink="#ff4c4c">
   <center>
     <center>
       <nobr>
@@ -41,23 +41,23 @@
     </tr>
     <tr>
       <% (0..3).each do |n| %>
-        <%= render "events/planets/#{@events[n].id}", locals: { event: @events[n] } if @events[n] %>
+        <%= render "topics/planets/#{@topics[n].id}", locals: { topic: @topics[n] } if @topics[n] %>
       <% end %>
     </tr>
     <tr>
-      <%= render "events/planets/#{@events[4].id}", locals: { event: @events[4] } if @events[4] %>
-      <%= render "events/planets/6" %>
-      <%= render "events/planets/#{@events[6].id}", locals: { event: @events[6] } if @events[6] %>
+      <%= render "topics/planets/#{@topics[4].id}", locals: { topic: @topics[4] } if @topics[4] %>
+      <%= render "topics/planets/6" %>
+      <%= render "topics/planets/#{@topics[6].id}", locals: { topic: @topics[6] } if @topics[6] %>
     </tr>
     <tr>
       <% (7..8).each do |n| %>
-        <%= render "events/planets/#{@events[n].id}", locals: { event: @events[n] } if @events[n] %>
+        <%= render "topics/planets/#{@topics[n].id}", locals: { topic: @topics[n] } if @topics[n] %>
       <% end %>
     </tr>
     <tr>
       <td></td>
       <% (9..11).each do |n| %>
-        <%= render "events/planets/#{@events[n].id}", locals: { event: @events[n] } if @events[n] %>
+        <%= render "topics/planets/#{@topics[n].id}", locals: { topic: @topics[n] } if @topics[n] %>
       <% end %>
     </tr>
   </tbody>
@@ -179,7 +179,7 @@
                     for (var e = 0; e < O.length; e++) {
                         T(O[e])
                     }
-                }, 15500)
+                }, 2000)
             }, true);
             e.addEventListener("ended", function () {
                 N();
