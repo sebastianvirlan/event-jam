@@ -16,6 +16,7 @@ class EventsController < ApplicationController
 
 # user creating an event
   def create
+    sleep(rand 1..3)
     @event = Event.create(event_params)
   end
 
