@@ -1,0 +1,100 @@
+<style>
+  .form input {
+    background-color: #3d8d4a;
+    height: 40px;
+    border: none;
+  }
+
+  .form input[type="submit"] {
+    background-color: #30fd2f;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+  }
+
+  .form td {
+    color: #fff;
+  }
+
+  .form .submitTD {
+    padding: 50 0 50 0;
+  }
+
+  .form .submitTD input {
+    font-size: 30px;
+  }
+
+  .form .sign-in {
+    margin-right: 100px;
+    padding-right: 20px;
+  }
+
+</style>
+<center>
+  <img src="/p-jamlogo.png" height="200">
+    <table class="form">
+      <tr>
+        <td valign="top">
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <table frame="box" class="sign-in" bgcolor="000000">
+              <tr>
+                <td colspan="2" align="center">
+                  <span style="color: red; font-size: 50px;">Log In</span>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 5px 20px 5px 20px;">
+                    <%= f.label :email %><br />
+                    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+                </td>
+                <td style="padding: 5px 20px px 20px;">
+                  <%= f.label :password %><br />
+                  <%= f.password_field :password, autocomplete: "current-password" %>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2" align="center" class="submitTD">
+                  <%= f.submit "Explore!!!" %>
+                </td>
+              </tr>
+            </table>
+          <% end %>          
+        </td>
+        <td>
+          <table frame="box" bgcolor="000000">
+            <tr>
+              <td colspan="2" align="center">
+                <span style="color: red; font-size: 50px;">Register Here</span>
+              </td>
+            </tr>
+            <tr>
+              <td  style="padding: 5px 20px 5px 20px;">
+                Name <br>
+                <input type="text" name="">
+              </td>
+              <td  style="padding: 5px 20px 5px 20px;">
+                Email <br>
+                <input type="email " name="">
+              </td>
+            </tr>
+            <tr>
+              <td  style="padding: 5px 20px 5px 20px;">
+                Password <br>
+                <input type="password" name="">
+              </td>
+              <td  style="padding: 5px 20px 5px 20px;">
+                Confirm Password <br>
+                <input type="password " name="">
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" align="center" class="submitTD">
+                <input type="submit" value="Explore!!!">
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+</center>
