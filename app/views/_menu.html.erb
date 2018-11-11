@@ -6,15 +6,14 @@
   }
 </style> -->
 <ul class="menu">
-  <li>
-    <div class="vistor-counter">
-    <%= render '/counter'%>
-    </div>
-  </li>
   <li><%= link_to 'Home', root_path %></li>
   <li><%= link_to 'Register', new_user_registration_path %></li>
   <li><%= link_to 'Events', events_path %></li>
+  <li><%= link_to 'Create New Event', new_event_path %></li>
   <% if user_signed_in? %>
+  <li>
+    <%= link_to('My Events', my_events_path) %>        
+  </li>
     <li>
     <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
       </li>
