@@ -1,7 +1,15 @@
 class EventsController < ApplicationController
+  before_action :authenticate_user!, :except => [:show, :index]
+
   # list all events (homepage)
   def index
     @events = Event.all
+  end
+
+  # list all events (homepage)
+  def my_events
+    @events = Event.where(creator_id: current_user.id)
+    render 'events/index'
   end
 
 # show one event
@@ -17,7 +25,7 @@ class EventsController < ApplicationController
 # user creating an event
   def create
     sleep(rand 1..3)
-    if @event = Event.create(event_params)
+    if @event = Event.create(event_params.merge(creator_id: current_user.id))
       redirect_to topics_path
     else
       render :new

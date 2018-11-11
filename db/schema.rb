@@ -14,11 +14,13 @@ ActiveRecord::Schema.define(version: 2018_11_10_185007) do
 
   create_table "events", force: :cascade do |t|
     t.string "title"
+    t.integer "creator_id"
     t.text "description"
     t.decimal "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "topic_id"
+    t.index ["creator_id"], name: "index_events_on_creator_id"
     t.index ["topic_id"], name: "index_events_on_topic_id"
   end
 
