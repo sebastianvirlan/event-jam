@@ -1,7 +1,10 @@
-<h2><%= @topic.name %></h2>
-<% @topic.events.each do |event| %>
-  <p><%= event.title %></p>
-  <p><%= event.description %></p>
-  <p><%= event.price %></p>
-  <hr />
-<% end %>
+<body class="topic-background">
+    <h2><%= @topic.name %></h2>
+    <% @topic.events.each do |event| %>
+      <%= link_to event.title, @event %>
+ <!--      <p><%= event.title %></p> -->
+      <p><%= event.description %></p>
+      <p><%= event.price %></p>
+      <hr />
+    <% end %>
+</body>

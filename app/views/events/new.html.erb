@@ -10,13 +10,23 @@
 
   <input type="submit">
 </form> -->
+<head>
+</head>
 
-
-
-<%= form_for @event do |f| %>
-  <%= f.text_field :title %>
-  <%= f.text_field :description %>
-  <%= f.text_field :price %>
-  <%= f.collection_select :topic_id, Topic.all, :id, :name %>
-  <%= f.submit %>
-<% end %>
+<body bgcolor="#000000" background="/bg_stars.gif" text="#ff0000" link="#ff4c4c" vlink="#ff4c4c" alink="#ff4c4c">
+  <h2> ADD AN EVENT</h2>
+  <div class="event-form">
+    <%= form_for @event do |f| %>
+    <h3> Event name </h3>
+      <%= f.text_field :title %>
+    <h3> Description </h3>
+      <%= f.text_field :description %>
+    <h3> Price</h3>
+      <%= f.text_field :price %>
+    <h3> Category</h3>
+      <%= f.collection_select :topic_id, Topic.all, :id, :name %>
+    <h3> MAGIC BUTTON</h3>
+      <%= f.submit %>
+    <% end %>
+  </div>
+</body>

@@ -6,6 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-15.times do |n|
-  Topic.create(name: "Topic #{n}")
+topic_list = ["Music", "Technology", "Art", "Food & Drink", "Business", "Parties", "Classes", "Sports & Wellbeing", "Film", "Outdoors", "Fashion", "Sci-Fi",]
+
+
+topic_list.each do |n|
+  Topic.create(name: "#{n}")
 end
+

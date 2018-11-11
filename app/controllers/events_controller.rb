@@ -18,7 +18,7 @@ class EventsController < ApplicationController
   def create
     sleep(rand 1..3)
     if @event = Event.create(event_params)
-      redirect_to events_path
+      redirect_to topics_path
     else
       render :new
     end
