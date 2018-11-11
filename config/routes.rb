@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     get 'login', to: 'devise/sessions#new'
 
     authenticated :user do
-      root 'home#index'
+      root 'topics#index'
     end
 
     unauthenticated do

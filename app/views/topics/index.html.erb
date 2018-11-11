@@ -1,94 +1,97 @@
-<center>
+<body class="topics-container">
   <center>
-    <nobr>
-      <table border="0" cellpadding="0" cellspacing="0" width="488" height="60">
-        <tbody>
-          <tr>
-            <td align="center"></td>
-            <td align="center" width="20"></td>
-            <td align="center"></td>
-          </tr>
-        </tbody>
-      </table>
-    </nobr>
-  </center>
+    <center>
+      <nobr>
+        <table border="0" cellpadding="0" cellspacing="0" width="488" height="60">
+          <tbody>
+            <tr>
+              <td align="center"></td>
+              <td align="center" width="20"></td>
+              <td align="center"></td>
+            </tr>
+          </tbody>
+        </table>
+      </nobr>
+    </center>
+    <br>
+    <table width="500" border="0">
+    <tbody>
+      <tr>
+        <td align="left"></td>
+        <td align="right"></td>
+      </tr>
+    </tbody>
+  </table>
   <br>
-  <table width="500" border="0">
-  <tbody>
-    <tr>
-      <td align="left"></td>
-      <td align="right"></td>
-    </tr>
-  </tbody>
-</table>
-<br>
-<br>
-<table width="1500" height="600" border="0">
-  <tbody>
-    <tr>
-      <td colspan="5" align="right" valign="top"></td>
-    </tr>
-    <tr>
-      <% (0..3).each do |n| %>
-        <%= render "topics/planets/#{@topics[n].id}", locals: { topic: @topics[n] } if @topics[n] %>
-      <% end %>
-    </tr>
-    <tr>
-      <%= render "topics/planets/#{@topics[4].id}", locals: { topic: @topics[4] } if @topics[4] %>
-      <%= render "topics/planets/6" %>
-      <%= render "topics/planets/#{@topics[6].id}", locals: { topic: @topics[6] } if @topics[6] %>
-    </tr>
-    <tr>
-      <% (7..8).each do |n| %>
-        <%= render "topics/planets/#{@topics[n].id}", locals: { topic: @topics[n] } if @topics[n] %>
-      <% end %>
-    </tr>
-    <tr>
-      <td></td>
-      <% (9..11).each do |n| %>
-        <%= render "topics/planets/#{@topics[n].id}", locals: { topic: @topics[n] } if @topics[n] %>
-      <% end %>
-    </tr>
-  </tbody>
-</table>
-<br>
-<br>
-<br>
-<!--**************Ads - Don't Touch!************************************-->
-<center><nobr>
-<table border="0" cellpadding="5" cellspacing="0">
-  <tbody>
-    <tr>
-      <td align="center" colspan="3"></td>
-    </tr>
-    <tr>
-      <td align="center"></td>
-      <td align="center" width="10"></td>
-      <td align="center"></td>
-    </tr>
-  </tbody>
-</table>
-</nobr></center>
-<%= render '/counter'%>
+  <br>
+  <table width="1500" height="600" border="0">
+    <tbody>
+      <tr>
+        <td colspan="5" align="right" valign="top"></td>
+      </tr>
+      <tr>
+        <% (0..3).each do |n| %>
+          <%= render "topics/planets/#{@topics[n].id}", locals: { topic: @topics[n] } if @topics[n] %>
+        <% end %>
+      </tr>
+      <tr>
+        <%= render "topics/planets/#{@topics[4].id}", locals: { topic: @topics[4] } if @topics[4] %>
+        <%= render "topics/planets/6" %>
+        <%= render "topics/planets/#{@topics[6].id}", locals: { topic: @topics[6] } if @topics[6] %>
+      </tr>
+      <tr>
+        <% (7..8).each do |n| %>
+          <%= render "topics/planets/#{@topics[n].id}", locals: { topic: @topics[n] } if @topics[n] %>
+        <% end %>
+      </tr>
+      <tr>
+        <td></td>
+        <% (9..11).each do |n| %>
+          <%= render "topics/planets/#{@topics[n].id}", locals: { topic: @topics[n] } if @topics[n] %>
+        <% end %>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <br>
+  <br>
+  <!--**************Ads - Don't Touch!************************************-->
+  <center><nobr>
+  <table border="0" cellpadding="5" cellspacing="0">
+    <tbody>
+      <tr>
+        <td align="center" colspan="3"></td>
+      </tr>
+      <tr>
+        <td align="center"></td>
+        <td align="center" width="10"></td>
+        <td align="center"></td>
+      </tr>
+    </tbody>
+  </table>
+  </nobr></center>
+  <div class="vistor-counter">
+    <%= render '/counter'%>
+  </div>
+  <!-- Add the stylesheet to the head -->
+  <link rel="stylesheet" type="text/css" href="https://gitcdn.xyz/repo/pi0/clippyjs/master/assets/clippy.css">
 
-<!-- Add the stylesheet to the head -->
-<link rel="stylesheet" type="text/css" href="https://gitcdn.xyz/repo/pi0/clippyjs/master/assets/clippy.css">
+  <!-- Add these scripts to  the bottom of the page -->
+  <script src="/harlem.js"></script>
+  <script src="https://unpkg.com/jquery@3.2.1"></script>
 
-<!-- Add these scripts to  the bottom of the page -->
-<script src="/harlem.js"></script>
-<script src="https://unpkg.com/jquery@3.2.1"></script>
+  <script src="https://unpkg.com/clippyjs@latest"></script>
 
-<script src="https://unpkg.com/clippyjs@latest"></script>
-
-<script type="text/javascript">
-clippy.load('Merlin', function(agent){
+  <script type="text/javascript">
+  clippy.load('Merlin', function(agent){
     // Do anything with the loaded agent
-    agent.show();
-});
+      agent.show();
+  });
 
-clippy.load('Clippy', function(agent){
+  clippy.load('Clippy', function(agent){
     // Do anything with the loaded agent
-    agent.moveTo(100,100);
-    agent.show();
-});
-</script>
+      agent.moveTo(100,100);
+      agent.show();
+  });
+  </script>
+</body>
