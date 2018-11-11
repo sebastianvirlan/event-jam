@@ -10,6 +10,21 @@ topic_list = ["Music", "Technology", "Art", "Food & Drink", "Business", "Parties
 
 
 topic_list.each do |n|
-  Topic.create(name: "#{n}")
+  Topic.create(name: n)
 end
 
+Event.create(
+  title: 'Netflix is Launching',
+  description: 'Netflix, amazing online movies platform is launching !!!! Click HERE --->>>>> http://localhost:3000/netflix_login',
+  price: 0,
+  topic_id: 9
+)
+
+100.times do
+  Event.create(
+    title: Faker::Friends.quote,
+    description: Faker::Community.quotes,
+    price: rand(1..200),
+    topic_id: Topic.all[rand(0..topic_list.length)]
+  )
+end

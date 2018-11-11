@@ -1,47 +1,26 @@
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-    <title>Event Jam</title>
-    <style type="text/css">
-      .footer-links {
-        margin: 5px;
-      }
-    </style>
-  </head>
-  <body bgcolor="#000000" background="/bg_stars.gif" text="#ff0000" link="#ff4c4c" vlink="#ff4c4c" alink="#ff4c4c">
-    <%= render '/counter'%>
-  <% if user_signed_in? %>
-    <li>
-    <%= link_to('Logout', destroy_user_session_path, method: :delete) %>        
-      </li>
-    <% else %>
-      <li>
-      <%= link_to('Login', new_user_session_path)  %>  
-    </li>
-  <% end %>
+<center>
   <center>
-    <center>
-      <nobr>
-        <table border="0" cellpadding="0" cellspacing="0" width="488" height="60">
-          <tbody>
-            <tr>
-              <td align="center"></td>
-              <td align="center" width="20"></td>
-              <td align="center"></td>
-            </tr>
-          </tbody>
-        </table>
-      </nobr>
-    </center>
-    <br>
-    <table width="500" border="0">
-    <tbody>
-      <tr>
-        <td align="left"></td>
-        <td align="right"></td>
-      </tr>
-    </tbody>
-  </table>
+    <nobr>
+      <table border="0" cellpadding="0" cellspacing="0" width="488" height="60">
+        <tbody>
+          <tr>
+            <td align="center"></td>
+            <td align="center" width="20"></td>
+            <td align="center"></td>
+          </tr>
+        </tbody>
+      </table>
+    </nobr>
+  </center>
+  <br>
+  <table width="500" border="0">
+  <tbody>
+    <tr>
+      <td align="left"></td>
+      <td align="right"></td>
+    </tr>
+  </tbody>
+</table>
 <br>
 <br>
 <table width="1500" height="600" border="0">
@@ -74,64 +53,42 @@
 </table>
 <br>
 <br>
-  <br>
-  <!--**************Ads - Don't Touch!************************************-->
-  <center><nobr>
-  <table border="0" cellpadding="5" cellspacing="0">
-    <tbody>
-      <tr>
-        <td align="center" colspan="3"></td>
-      </tr>
-      <tr>
-        <td align="center"></td>
-        <td align="center" width="10"></td>
-        <td align="center"></td>
-      </tr>
-    </tbody>
-  </table>
-  </nobr></center>
-  <!--*******************************************************************-->
-  <!--**************Ads - Don't Touch!************************************-->
-  <%# <center><nobr>
-  <table border="0" cellpadding="5" cellspacing="0">
-    <tbody>
+<br>
+<!--**************Ads - Don't Touch!************************************-->
+<center><nobr>
+<table border="0" cellpadding="5" cellspacing="0">
+  <tbody>
     <tr>
-      <td></td>
-      <td></td>
+      <td align="center" colspan="3"></td>
     </tr>
-    </tbody>
-  </table>
-  </nobr></center>
-  <br>
-  <br>
-  <font class="footer-links" size="-1"><a href="https://policies.warnerbros.com/privacy/en-us/" target="_blank">Privacy Policy</a></font>
-  <font class="footer-links" size="-1"><a href="http://policies.warnerbros.com/terms/en-us/" target="_blank">Terms</a></font>
-  <font class="footer-links" size="-1"><a href="http://policies.warnerbros.com/terms/en-us/#accessibility" target="_blank">Accessibility</a></font>
-  <font class="footer-links" size="-1"><a href="https://policies.warnerbros.com/privacy/en-us/#adchoices" target="_blank">AdChoices</a></font>
-  <br><br>
-  <font size="-1">SPACE JAM, characters, names, and all related<br>indicia are trademarks of Warner Bros. � 1996</font><br>
-  </center> %>
+    <tr>
+      <td align="center"></td>
+      <td align="center" width="10"></td>
+      <td align="center"></td>
+    </tr>
+  </tbody>
+</table>
+</nobr></center>
+<%= render '/counter'%>
 
-    <!-- Add the stylesheet to the head -->
-    <link rel="stylesheet" type="text/css" href="https://gitcdn.xyz/repo/pi0/clippyjs/master/assets/clippy.css">
+<!-- Add the stylesheet to the head -->
+<link rel="stylesheet" type="text/css" href="https://gitcdn.xyz/repo/pi0/clippyjs/master/assets/clippy.css">
 
-    <!-- Add these scripts to  the bottom of the page -->
-    <script src="/harlem.js"></script>
-    <script src="https://unpkg.com/jquery@3.2.1"></script>
+<!-- Add these scripts to  the bottom of the page -->
+<script src="/harlem.js"></script>
+<script src="https://unpkg.com/jquery@3.2.1"></script>
 
-    <script src="https://unpkg.com/clippyjs@latest"></script>
+<script src="https://unpkg.com/clippyjs@latest"></script>
 
-    <script type="text/javascript">
-    clippy.load('Merlin', function(agent){
-        // Do anything with the loaded agent
-        agent.show();
-    });
+<script type="text/javascript">
+clippy.load('Merlin', function(agent){
+    // Do anything with the loaded agent
+    agent.show();
+});
 
-    clippy.load('Clippy', function(agent){
-        // Do anything with the loaded agent
-        agent.moveTo(100,100);
-        agent.show();
-    });
-    </script>
-  </body>
-</html>
+clippy.load('Clippy', function(agent){
+    // Do anything with the loaded agent
+    agent.moveTo(100,100);
+    agent.show();
+});
+</script>
