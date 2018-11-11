@@ -1,6 +1,15 @@
-.topics-container {
+.menu li {
+  display: inline;
+  padding-left: 20px;
+  width: 50%;
+}
 
+.topics-container {
+ position: relative;
 }
 .vistor-counter {
   float: right;
+  position: absolute;
+  right: 5px;
+  top: 5px;
 }
