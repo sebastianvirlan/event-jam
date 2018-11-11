@@ -15,9 +15,11 @@
           <tr>
             <% 5.times do |n| %>
               <td>
-                <img src="/giphy.gif" width="200">
-                <br>
-                <center>Movie no <%= n%><center>
+                <center>
+                  <img src="/giphy.gif" width="200">
+                  <br>
+                  <%= ::Faker::Movie.quote %>
+                </center>
               </td>
             <% end %>
           </tr>

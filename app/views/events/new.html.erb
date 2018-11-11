@@ -1,32 +1,32 @@
-<!-- <form action="/events" method="post">
-  <label for="name">Event title: </label>
-  <input type="text" name="event[title]" id="title">
-
-  <label for="address">Description: </label>
-  <input type="text" name="event[description]" id="description">
-
-  <label for="address">Price: </label>
-  <input type="text" name="event[price]" id="price">
-
-  <input type="submit">
-</form> -->
-<head>
-</head>
-
 <body bgcolor="#000000" background="/bg_stars.gif" text="#ff0000" link="#ff4c4c" vlink="#ff4c4c" alink="#ff4c4c">
-  <h2> ADD AN EVENT</h2>
-  <div class="event-form">
+  <center>
     <%= form_for @event do |f| %>
-    <h3> Event name </h3>
-      <%= f.text_field :title %>
-    <h3> Description </h3>
-      <%= f.text_field :description %>
-    <h3> Price</h3>
-      <%= f.text_field :price %>
-    <h3> Category</h3>
-      <%= f.collection_select :topic_id, Topic.all, :id, :name %>
-    <h3> MAGIC BUTTON</h3>
-      <%= f.submit %>
-    <% end %>
-  </div>
+    <table border="1" width="900" cellpadding="30" bgcolor="000000">
+      <tr>
+        <td colspan="2">
+          <marquee><h2>ADD AN EVENT</h2></marquee>
+        </td>
+      </tr>
+      <tr>
+        <td><%= f.label :title %></td>
+        <td><%= f.text_field :title %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :description %></td>
+        <td><%= f.text_area :description, rows: 5, cols: 40 %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :price %></td>
+        <td><%= f.text_field :price %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :topic %></td>
+        <td><%= f.collection_select :topic_id, Topic.all, :id, :name %></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center"><%= f.submit %></td>
+      </tr>
+    </table>
+  <% end %>
+  </center>
 </body>

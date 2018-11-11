@@ -1,10 +1,20 @@
 <body class="topic-background">
-    <h2><%= @topic.name %></h2>
-    <% @topic.events.each do |event| %>
-      <%= link_to event.title, @event %>
- <!--      <p><%= event.title %></p> -->
-      <p><%= event.description %></p>
-      <p><%= event.price %></p>
-      <hr />
-    <% end %>
+  <center>
+    <img src="/7WDh.gif" onclick="a1()">
+    <table border="1" width="900" cellpadding="30" bgcolor="000000">
+      <tr>
+        <td colspan="3">
+          <marquee><h2><%= @topic.name %></h2></marquee>
+        </td>
+      </tr>
+      <% @topic.events.each do |event| %>
+        <tr>
+          <td><%= link_to event.title, event_path(event) %></td>
+          <td><%= event.description %></td>
+          <td><%= event.price %></td>
+        </tr>
+      <% end %>
+    </table>
+  </center>
+  <script src="/popups.js"></script>
 </body>

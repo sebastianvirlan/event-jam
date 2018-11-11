@@ -1,7 +1,5 @@
-
-<body class="event-background">
+<body bgcolor="#000000" background="/bg_stars.gif" text="#ff0000" link="#ff4c4c" vlink="#ff4c4c" alink="#ff4c4c">
   <center>
-    <img src="/fBKu2l8.gif" onclick="a1()">
     <table border="1" width="900" cellpadding="30" bgcolor="000000">
       <tr>
         <td>
@@ -14,11 +12,13 @@
           <marquee><h3>Price</h3></marquee>
         </td>
       </tr>
-      <tr>
-        <td><%= @event.title %></td>
-        <td><%= @event.description %></td>
-        <td><%= @event.price %></td>
-      </tr>
+      <% @events.each do |event| %>
+        <tr>
+          <td><%= link_to event.title, event_path(event) %></td>
+          <td><%= event.description %></td>
+          <td><%= event.price %></td>
+        </tr>
+      <% end %>
     </table>
   </center>
 </body>
