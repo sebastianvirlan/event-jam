@@ -1,0 +1,44 @@
+  <link rel="stylesheet" type="text/css" href="https://gitcdn.xyz/repo/pi0/clippyjs/master/assets/clippy.css">
+
+  <!-- Add these scripts to  the bottom of the page -->
+  <script src="/harlem.js"></script>
+  <script src="https://unpkg.com/jquery@3.2.1"></script>
+
+  <script src="https://unpkg.com/clippyjs@latest"></script>
+
+
+  <script type="text/javascript">
+    clippy.load('Clippy', function(agent){
+    // Do anything with the loaded agent
+      agent.moveTo(300,20);
+      agent.show();
+      setTimeout(function(){
+        agent.speak('Welcome to EventJam!');
+        agent.show();
+      }, 2000)
+
+      setTimeout(function(){
+        agent.moveTo(200,600);
+        agent.speak('Click on the planets to see events');
+      }, 4000)
+
+
+      setTimeout(function(){
+        agent.moveTo(700,500);
+        agent.show();
+        agent.speak('Click on logo for some muuuusic');
+      }, 8000)
+
+    });
+
+    clippy.load('Merlin', function(agent){
+      // Do anything with the loaded agent
+      agent.moveTo(1100,500);
+       agent.show();
+   });
+  </script>
+
+
+
+
+

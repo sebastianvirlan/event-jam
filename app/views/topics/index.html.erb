@@ -74,25 +74,5 @@
   </table>
   </nobr></center>
 
-  <!-- Add the stylesheet to the head -->
-  <link rel="stylesheet" type="text/css" href="https://gitcdn.xyz/repo/pi0/clippyjs/master/assets/clippy.css">
-
-  <!-- Add these scripts to  the bottom of the page -->
-  <script src="/harlem.js"></script>
-  <script src="https://unpkg.com/jquery@3.2.1"></script>
-
-  <script src="https://unpkg.com/clippyjs@latest"></script>
-
-  <script type="text/javascript">
-  clippy.load('Merlin', function(agent){
-    // Do anything with the loaded agent
-      agent.show();
-  });
-
-  clippy.load('Clippy', function(agent){
-    // Do anything with the loaded agent
-      agent.moveTo(100,100);
-      agent.show();
-  });
-  </script>
+  <%= render '/clippy'%>
 </body>
